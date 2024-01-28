@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - My App{% endblock %}
+
+{% block content %}
+<h1>Add a New Book</h1>
+<form method="POST" action="{{ url_for('add_book') }}">
+    <label for="name">Book Name:</label>
+    <input type="text" id="name" name="name" required><br>
+    <label for="author">Author:</label>
+    <input type="text" id="author" name="author" required><br>
+    <input type="submit" value="Add Book" class="btn btn-primary">
+</form>
+<div>
+    <a href="{{ url_for('home') }}" class="btn btn-primary">Back to Catalog</a>
+</div>
+    
+{% endblock %}
